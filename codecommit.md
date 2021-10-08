@@ -80,27 +80,24 @@ git checkout -b "MoveOneBranchtoAnotherBranch"
 
 https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html
 
-- **Notification**
+- **1. Create Notification**
     - Notification name: codecommit-notification
     - Detail type: full
     - Events that trigger notifications: Select all
     - Targets: SNS/AWS Slack BOT
 
-- **Create trigger**
+- **2. Create trigger**
     - Trigger name: codecommit-trigger
     - Events: default
     - Events that trigger notifications: Select all
-    - Targets: SNS/AWS Slack BOT
+    - Service details: Choose the service to use: SNS/Lambda
 
-- **Service details**
-    - Choose the service to use: SNS/Lambda
-
-- **Cloudwath event Rules**
+- **3. Cloudwath event Rules**
     - Services Name: Codecommit
     - Event Type: default
 
 -**Cloudwath Source Target**
-    -Add Target
+    -Add Target: Lambda/SNS
 
 ## step 7: CodeCommit - & AWS Lambda
 
