@@ -32,9 +32,71 @@ git checkout -b "MoveOneBranchtoAnotherBranch"
 
 ## step 5: CodeCommit - Securing the Repository and Branches
 
+ - step 1: create a group (junior Dev)
+ - step 2: create Inline policies in the permissions 
+ - step 3: Policy Name: cannotpushToMasterInCodeCommit
+ ```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": [
+                "codecommit:GitPush",
+                "codecommit:DeleteBranch",
+                "codecommit:PutFile",
+                "codecommit:MergeBranchesByFastForward",
+                "codecommit:MergeBranchesBySquash",
+                "codecommit:MergeBranchesByThreeWay",
+                "codecommit:MergePullRequestByFastForward",
+                "codecommit:MergePullRequestBySquash",
+                "codecommit:MergePullRequestByThreeWay"
+            ],
+            "Resource": "arn:aws:codecommit:u*:*:*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "codecommit:References": [
+                        "refs/heads/main", 
+                        "refs/heads/prod"
+                     ]
+                },
+                "Null": {
+                    "codecommit:References": "false"
+                }
+            }
+        }
+    ]
+}
+
+```
+ - step 4: Add group with user. 
+
+
+
+
 ## step 6: CodeCommit - Triggers & Notifications
 
 ## step 7: CodeCommit - & AWS Lambda
 
+
+
+## Reference
+
+
+https://www.atlassian.com/git/tutorials/using-branches
+
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-conditional-branch.html
+https://aws.amazon.com/blogs/devops/refining-access-to-branches-in-aws-codecommit/
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html )
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
+
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-existing.html
 
 
