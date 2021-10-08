@@ -1,4 +1,4 @@
-AWS CICD:
+##SDLC Automation
 
 ## codecommit:
 
@@ -20,6 +20,23 @@ Default output format [None]: text
 
 # Step 4: Create project with codecommit
 https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/aws-practice-codecommit-project-1/setup?region=us-east-2
+
+```
+
+git add .
+git commit -m "first commit"
+git push origin master 
+git branch -b "create_branch"
+git checkout -b "MoveOneBranchtoAnotherBranch"
+
+```
+
+
+# step 5: CodeCommit - Securing the Repository and Branches
+
+# step 6: CodeCommit - Triggers & Notifications
+
+# step 7: CodeCommit - & AWS Lambda
 
 
 
