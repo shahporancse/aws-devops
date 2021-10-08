@@ -100,8 +100,9 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.
     -Add Target: Lambda/SNS
 
 ## step 7: CodeCommit - & AWS Lambda with Slack
-https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
-https://www.youtube.com/watch?v=5UC8adwht4k
+- https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
+- https://www.youtube.com/watch?v=5UC8adwht4k
+- https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
 
 ```
 import os
@@ -273,8 +274,6 @@ https://aws.amazon.com/blogs/devops/refining-access-to-branches-in-aws-codecommi
 https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify.html
 
 https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html )
-
-https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
 
 https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-existing.html
 
