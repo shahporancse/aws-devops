@@ -32,7 +32,7 @@ git checkout -b "MoveOneBranchtoAnotherBranch"
 
 ## step 5: CodeCommit - Securing the Repository and Branches
 
- - step 1: create a group (junior Dev)
+ - step 1: create a group (junior_Dev)
  - step 2: create Inline policies in the permissions 
  - step 3: Policy Name: cannotpushToMasterInCodeCommit
  ```
@@ -56,8 +56,10 @@ git checkout -b "MoveOneBranchtoAnotherBranch"
             "Condition": {
                 "StringEqualsIfExists": {
                     "codecommit:References": [
-                        "refs/heads/main", 
-                        "refs/heads/prod"
+                        "refs/heads/master", 
+                        "refs/heads/prod",
+                        "refs/heads/stage"
+
                      ]
                 },
                 "Null": {
@@ -69,12 +71,34 @@ git checkout -b "MoveOneBranchtoAnotherBranch"
 }
 
 ```
- - step 4: Add group with user. 
 
+ - step 4: Add junior_dev group with user. 
 
 
 
 ## step 6: CodeCommit - Triggers & Notifications
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html
+-**Notification**
+    -Notification name: codecommit-notification
+    -Detail type: full
+    -Events that trigger notifications: Select all
+    -Targets: SNS/AWS Slack BOT
+
+-**Create trigger**
+    -Trigger name: codecommit-trigger
+    -Events: default
+    -Events that trigger notifications: Select all
+    -Targets: SNS/AWS Slack BOT
+
+-**Service details**
+    -Choose the service to use: SNS/Lambda
+
+-**Cloudwath event Rules**
+    -Services Name: Codecommit
+    -Event Type: default
+
+-**Cloudwath Source Target**
+    -Add Target
 
 ## step 7: CodeCommit - & AWS Lambda
 
