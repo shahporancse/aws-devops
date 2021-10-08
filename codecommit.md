@@ -95,13 +95,11 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.
 - **3. Cloudwath event Rules**
     - Services Name: Codecommit
     - Event Type: default
-
--**Cloudwath Source Target**
-    -Add Target: Lambda/SNS
+    - Add Target: Lambda/SNS
 
 ## step 7: CodeCommit - & AWS Lambda
 
-
+https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.html
 
 ## Reference
 
