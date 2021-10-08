@@ -1,14 +1,14 @@
 AWS CICD:
 
-##codecommit:
+## codecommit:
 
-#Step 1: Create IAM User 
+# Step 1: Create IAM User 
 
-#Step 2: Install AWS Cli 
+# Step 2: Install AWS Cli 
 
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
 
-#Step 3: Configure IAM Configure with Cli
+# Step 3: Configure IAM Configure with Cli
 
 ```
 aws configure --profile produser
@@ -18,7 +18,7 @@ Default region name [None]: us-east-1
 Default output format [None]: text
 ```
 
-#Step 4: Create project with codecommit
+# Step 4: Create project with codecommit
 https://us-east-2.console.aws.amazon.com/codesuite/codecommit/repositories/aws-practice-codecommit-project-1/setup?region=us-east-2
 
 
