@@ -81,21 +81,30 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.
 
 -**Notification**
     -Notification name: codecommit-notification
+
     -Detail type: full
+
     -Events that trigger notifications: Select all
+
     -Targets: SNS/AWS Slack BOT
 
 -**Create trigger**
     -Trigger name: codecommit-trigger
+
     -Events: default
+
     -Events that trigger notifications: Select all
+
     -Targets: SNS/AWS Slack BOT
 
 -**Service details**
+
     -Choose the service to use: SNS/Lambda
 
 -**Cloudwath event Rules**
+
     -Services Name: Codecommit
+
     -Event Type: default
 
 -**Cloudwath Source Target**
